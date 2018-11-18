@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Here's a Bit About Us</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/uikit.min.css') }}" />
+        <script src="{{ url_for('static', filename='js/uikit.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/uikit-icons.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/uikit-icons.min.js') }}"></script>
+    </head>
+    <body>
+        <!-- NavBar -->
+        <nav class="uk-navbar-container" uk-navbar>
+                <div class="uk-navbar-center">
+                    <a href="http://127.0.0.1:5000" class="uk-navbar-item uk-logo">
+                        <img data-src="{{ url_for('static', filename='images/logo.png') }}" width="100" height="" alt="" uk-img>
+                    </a>
+                </div>
+        </nav>
+
+        <!-- Header -->
+
+        <h1 class="uk-heading-line uk-text-center"><span>"We are the music-makers,
+        and we are the dreamers of dreams."</span></h1>
+
+        <!-- Cards -->
+        <div class="uk-child-width-1-2 uk-grid-match uk-padding-large" uk-grid>
+            <div>
+                <div class="uk-card uk-card-default uk-card-body">
+                    <h3 class="uk-card-title">Erik Cederstav</h3>
+                    <p>Studying <b>Mechanical Engineering</b> here at Stevens. I hope to work in the amusement ride industry in the future. Other interests include computers and music.</p>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-card-body">
+                    <h3 class="uk-card-title">Jayden Pereira</h3>
+                    <p>Studying <b>Computer Engineering</b> at Stevens. Dream is to get a Ph.D. and work for Google. Interested in artificial intelligence and machine learning.</p>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-card-body">
+                    <h3 class="uk-card-title">Anushtup Bhowmik</h3>
+                    <p>Studying <b>Computer Engineering</b> at Stevens. Interested in the intersection between Software Development and Finance, namely using data analysis to understand businesses and marketing principles in the tech sector.</p>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-card-body">
+                    <h3 class="uk-card-title">Luke Jacob</h3>
+                    <p>Studying Mechanical Engineering at Stevens. Interested in all aspects of Robotics, Mechatronics, and Computer Science.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome to Flow</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/uikit.min.css') }}" />
+        <script src="{{ url_for('static', filename='js/uikit.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/uikit-icons.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/uikit-icons.min.js') }}"></script>
+    </head>
+    <body>
+        <!-- NavBar -->
+        <nav class="uk-navbar-container" uk-navbar>
+                <div class="uk-navbar-center">
+                    <a href="http://127.0.0.1:5000" class="uk-navbar-item uk-logo">
+                        <img data-src="{{ url_for('static', filename='images/logo.png') }}" width="100" height="" alt="" uk-img>
+                    </a>
+                </div>
+        </nav>
+
+        <!-- _____ to ______ -->
+        <h1 align="center" class=" uk-heading-primary uk-align-center uk-margin-medium">Hoboken to Cranford</h1>
+
+        <!-- Option Cards -->
+        <p uk-margin>
+            <div class="uk-card uk-card-default uk-card-body uk-width-5-6 uk-align-center uk-card uk-card-hover">
+                <h3><b>Departure:</b> {{ option1 }} | <b>Arrival:</b> CRANFORD at 5:55 PM | <b>Time Elapsed:</b> 1:04 | <b>Price:</b> $7.00</h3>
+            </div>
+            <div class="uk-card uk-card-default uk-card-body uk-width-5-6 uk-align-center uk-card uk-card-hover">
+                <h3><b>Departure:</b> HOBOKEN TERMINAL at 5:20 PM | <b>Arrival:</b> NORTH AVE AT ALDEN ST at 6:42 PM | <b>Time Elapsed:</b> 0:54 | <b>Price:</b> $11.50</h3>
+            </div>
+            <div class="uk-card uk-card-default uk-card-body uk-width-5-6 uk-align-center uk-card uk-card-hover">
+                <h3><b>Departure:</b> HOBOKEN PATH STATION at 5:45 PM | <b>Arrival:</b> CRANFORD at 6:55 PM | <b>Time Elapsed:</b> 1:10 | <b>Price:</b> $7.00</h3>
+            </div>
+        </p>
+    </body>
+</html>

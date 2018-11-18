@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flow</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/uikit.min.css') }}" />
+        <script src="{{ url_for('static', filename='js/uikit.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/uikit-icons.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/uikit-icons.min.js') }}"></script>
+    </head>
+    <body>
+        <!-- NavBar -->
+        <nav class="uk-navbar-container" uk-navbar>
+                <div class="uk-navbar-center">
+                    <a href="http://127.0.0.1:5000/aboutus" class="uk-navbar-item uk-logo">
+                        <img data-src="{{ url_for('static', filename='images/logo.png') }}" width="100" height="" alt="" uk-img>
+                    </a>
+                </div>
+        </nav>
+
+        <!-- Header -->
+        <h1 align="center" class="uk-heading-hero uk-padding-large uk-padding-remove-top" id="testheader">Start Your Journey.</h1>
+
+        <!-- Form -->
+        <div>
+            <form id="form" class="uk-margin uk-grid-small uk-align-center uk-width-large">
+                <div class="uk-margin">
+                    <input id="origin" class="uk-input" type="text" placeholder="Origin">
+                    <input id="destination" class="uk-input" type="text" placeholder="Destination">
+                </div>
+
+                 <div>
+                     <select class="uk-select uk-width-3-6" id="deporarr">
+                        <option value="True">Depart By</option>
+                        <option value="False">Arrive By</option>
+                    </select>
+                </div>
+
+                <div class="uk-margin uk-align-center">
+                    <input id="date" class="uk-input uk-width-small" type="text" placeholder="01.01.2018">
+                    <input id="time" class="uk-input uk-width-small" type="text" placeholder="6:30">
+                    <select class="uk-select uk-width-1-6" id="amorpm">
+                        <option value="True">AM</option>
+                        <option value="False">PM</option>
+                    </select>
+                </div>
+            </form>
+
+            <button id="button" class="uk-button uk-button-secondary uk-position-bottom-center uk-margin-xlarge" onclick="window.location.href=url()">Find Your Route</button>
+        </div>
+
+    </body>
+
+    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/uikit.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/uikit-icons.min.js') }}"></script>
+    <script type="text/javascript">
+
+        function url() {
+
+        var org = $("input#origin").val();
+        var dest = $("input#destination").val();
+
+        var aord = $("select#deporarr").val();
+
+        var date = $("input#date").val();
+        var time = $("input#time").val();
+        var ampm = $("select#amorpm").val();
+
+        var url = 'http://127.0.0.1:5000/' + org + '_to_' + dest + '_' + aord + '_' + date + '_' + time + '_' + ampm
+
+        return url
+        }
+
+
+
+    </script>
+</html>
